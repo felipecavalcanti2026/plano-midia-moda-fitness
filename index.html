@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Plano de Mídia 12 Meses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: periodização de treino — hero de manchete condensada, seções em trilho de 4 fases, gráficos desenhados à mão */
+:root{
+  --bg:#F1F2F4; --surface:#FFFFFF; --ink:#15171D; --muted:#5D6270; --line:#DADCE2;
+  --accent:#E2335E; --accent-soft:#FBE3EA; --ink-soft:#E6E7EB;
+  --good:#1F8A5B; --warn:#C27C0E;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1015; --surface:#171A21; --ink:#F0F1F4; --muted:#9BA0AD; --line:#2A2E38;
+  --accent:#FF5B80; --accent-soft:#3A1C26; --ink-soft:#232731; --good:#4CC28C; --warn:#E6A83D; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1015; --surface:#171A21; --ink:#F0F1F4; --muted:#9BA0AD; --line:#2A2E38;
+  --accent:#FF5B80; --accent-soft:#3A1C26; --ink-soft:#232731; --good:#4CC28C; --warn:#E6A83D; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:0 72px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:.95;letter-spacing:.005em}
+h2{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:900;text-transform:uppercase}
+h3{font-size:1.6rem;font-weight:800;text-transform:uppercase}
+p{margin:0;max-width:66ch}
+.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+/* HERO */
+.hero{padding-block:56px 40px;display:grid;gap:28px;border-bottom:2px solid var(--ink)}
+.hero h1{font-size:clamp(3.4rem,11vw,8.2rem);font-weight:900;text-transform:uppercase;line-height:.86}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lead{font-size:1.15rem;max-width:58ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.85rem;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:600}
+
+/* Scenario cards */
+.scen{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px;margin-top:8px}
+.card{background:var(--surface);border-radius:14px;padding:24px;display:grid;gap:14px;min-width:0}
+.card.hot{background:var(--ink);color:var(--bg)}
+.card.hot .muted{color:color-mix(in srgb,var(--bg) 70%,transparent)}
+.card .tag{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.card.hot .tag{color:var(--accent)}
+.big{font-family:var(--display);font-weight:900;font-size:3.6rem;line-height:.9}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;border-top:1px solid currentColor;padding-top:14px;border-color:color-mix(in srgb,currentColor 25%,transparent)}
+.stats div{display:grid;gap:2px;min-width:0}
+.stats b{font-family:var(--display);font-size:1.7rem;font-weight:800;line-height:1}
+.stats span{font-size:.75rem}
+
+section{padding-block:64px 0;display:grid;gap:28px}
+.sec-head{display:grid;gap:12px}
+.sec-head .idx{font-family:var(--display);font-weight:800;font-size:1rem;color:var(--muted);letter-spacing:.08em}
+
+/* premissas */
+.prem{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.prem div{background:var(--surface);padding:20px;display:grid;gap:6px;align-content:start}
+.prem b{font-family:var(--display);font-size:2rem;font-weight:800;line-height:1}
+.prem span{font-size:.85rem;color:var(--muted)}
+
+/* concorrentes */
+.comp{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
+.comp .card h3 a{color:inherit;text-decoration:none;border-bottom:2px solid var(--accent)}
+dl{margin:0;display:grid;gap:10px}
+dl div{display:grid;grid-template-columns:110px 1fr;gap:12px;font-size:.92rem}
+dt{color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;padding-top:2px}
+dd{margin:0;min-width:0}
+.opps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
+.opp{border-top:3px solid var(--accent);padding-top:14px;display:grid;gap:6px}
+.opp b{font-weight:700}
+.opp p{font-size:.92rem;color:var(--muted)}
+
+/* tables */
+.tbl{overflow-x:auto;background:var(--surface);border-radius:14px}
+table{border-collapse:collapse;width:100%;font-size:.92rem;min-width:620px}
+th,td{text-align:left;padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+td.r{white-space:nowrap}
+.kpi td:nth-child(3){min-width:240px}
+tr.total td{font-weight:700;border-bottom:0;background:var(--ink-soft)}
+.c-acc{color:var(--accent);font-weight:600}
+
+/* chart */
+.chart{background:var(--surface);border-radius:14px;padding:20px 16px 12px;overflow-x:auto}
+.chart svg{display:block;width:100%;min-width:560px;height:auto}
+.chart .ct{font-family:var(--display);font-size:1.5rem;font-weight:800;text-transform:uppercase;padding:0 8px;line-height:1.05}
+.chart .cs{font-size:.85rem;color:var(--muted);padding:6px 8px 0}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:.85rem;padding:12px 8px 0}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.caption{font-size:.78rem;color:var(--muted)}
+
+/* rules */
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
+.rule{background:var(--surface);border-radius:14px;padding:18px;font-size:.92rem;display:grid;gap:6px;align-content:start}
+.rule b{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+
+/* periodização */
+.track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;position:relative}
+.phase{background:var(--surface);border-radius:14px;padding:22px 20px;display:grid;gap:16px;align-content:start;min-width:0;position:relative}
+.phase .bar{height:6px;border-radius:3px;background:var(--ink-soft);overflow:hidden}
+.phase .bar i{display:block;height:100%;background:var(--accent)}
+.phase .when{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.phase h3{font-size:clamp(1.5rem,2.4vw,2rem);overflow-wrap:anywhere}
+.phase .goal{font-size:.92rem}
+.phase ul{margin:0;padding:0;list-style:none;display:grid;gap:12px;font-size:.88rem}
+.phase li{display:grid;gap:2px}
+.phase li b{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.gate{margin-top:auto;border:1.5px dashed var(--accent);border-radius:10px;padding:12px;font-size:.85rem;background:var(--accent-soft)}
+.gate b{display:block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
+@media (max-width:920px){.track{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.track{grid-template-columns:1fr}.stats b{font-size:1.4rem}.big{font-size:3rem}}
+
+/* checklist */
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
+.check{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.check li{display:flex;gap:12px;align-items:flex-start;font-size:.93rem}
+.check li::before{content:"";flex:none;width:18px;height:18px;border:2px solid var(--accent);border-radius:5px;margin-top:2px}
+.check.two{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px 28px}
+
+/* tabelas explicadas */
+.tblbox{display:grid;gap:14px}
+.tblbar{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between}
+.how{font-size:.88rem;color:var(--muted);max-width:70ch}
+.how b{color:var(--ink)}
+.seg{display:inline-flex;background:var(--ink-soft);border-radius:999px;padding:4px;gap:4px}
+.seg button{font:600 .85rem var(--body);border:0;border-radius:999px;padding:8px 16px;background:transparent;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.seg button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+th small{display:block;text-transform:none;letter-spacing:0;font-size:.74rem;font-weight:400;margin-top:3px;color:var(--muted);opacity:.9}
+td:first-child{white-space:nowrap}
+td small{display:block;color:var(--muted);font-size:.78rem;font-weight:400;margin-top:4px}
+td.big-v{font-weight:700;font-size:1rem}
+.neg{color:var(--accent)}
+.pos{color:var(--good)}
+.pill{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.pill.p-low{background:var(--accent-soft);color:var(--accent)}
+.pill.p-mid{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.pill.p-ok{background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good)}
+.kpi td:first-child{width:190px}
+.kpi ul{margin:0;padding:0;list-style:none;display:grid;gap:4px}
+.foot{font-size:.8rem;color:var(--muted);display:grid;gap:4px}
+
+.sources{font-size:.85rem;color:var(--muted);display:grid;gap:6px;border-top:1px solid var(--line);padding-top:20px;margin-top:64px}
+.sources a{color:var(--ink)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+</head><body style="margin:0">
+
+<div class="wrap">
+
+  <header class="hero">
+    <span class="eyebrow">Plano de tráfego pago · Meta Ads + Google Ads · moda fitness</span>
+    <h1>12 meses.<br>4 blocos.<br><em>2 ritmos.</em></h1>
+    <p class="lead">Plano de mídia para lançar uma marca de moda fitness do zero, com dois níveis de investimento e projeção de retorno por trimestre. Como num treino periodizado: começa na adaptação, sobe a carga quando o corpo responde e chega no pico nos últimos três meses.</p>
+    <div class="meta"><span>Preparado em <b>12/10/2026</b></span><span>Concorrentes de referência <b>ARM Fitness · Hope Resort</b></span></div>
+
+    <div class="scen">
+      <article class="card">
+        <span class="tag muted">Cenário conservador</span>
+        <div class="big num">R$ 174 mil</div>
+        <p class="muted">Investimento em mídia em 12 meses. Cresce só quando o bloco anterior bate a meta.</p>
+        <div class="stats">
+          <div><b class="num">3,1x</b><span class="muted">ROAS no ano</span></div>
+          <div><b class="num">R$ 544 mil</b><span class="muted">faturamento</span></div>
+          <div><b class="num">1.943</b><span class="muted">pedidos</span></div>
+        </div>
+      </article>
+      <article class="card hot">
+        <span class="tag">Cenário agressivo</span>
+        <div class="big num">R$ 402 mil</div>
+        <p class="muted">Escala mais cedo. Perde um pouco de eficiência, mas fatura 2,1 vezes mais.</p>
+        <div class="stats">
+          <div><b class="num">2,9x</b><span class="muted">ROAS no ano</span></div>
+          <div><b class="num">R$ 1,16 mi</b><span class="muted">faturamento</span></div>
+          <div><b class="num">4.142</b><span class="muted">pedidos</span></div>
+        </div>
+      </article>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head">
+      <span class="idx">01 · Base de cálculo</span>
+      <h2>Premissas</h2>
+      <p class="muted">Nos dois cenários, os meses 1 a 3 rodam abaixo do ponto de equilíbrio, os meses 4 a 6 empatam e a operação fica lucrativa a partir do mês 7. É o comportamento esperado para uma marca sem base de clientes, sem prova social e sem histórico de pixel.</p>
+    </div>
+    <div class="prem">
+      <div><b class="num">R$ 280</b><span>Ticket médio. Concorrentes vendem peças de R$ 99 a R$ 360 e kits perto de R$ 199.</span></div>
+      <div><b class="num">45–50%</b><span>Margem de contribuição após produto, frete, gateway e impostos.</span></div>
+      <div><b class="num">2,1x</b><span>ROAS de break-even. Abaixo disso, a mídia ainda não se paga.</span></div>
+      <div><b>E-commerce</b><span>Loja própria, venda nacional, público feminino.</span></div>
+      <div><b class="num">+15–20%</b><span>Reserva fora da mídia para criativos, fotos e influenciadoras.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="idx">02 · Mercado</span>
+      <h2>Concorrentes</h2>
+      <p class="muted">Os dois vendem por preço percebido e promoção constante. A marca nova precisa de uma oferta de entrada forte e de identidade própria para não disputar só no desconto.</p>
+    </div>
+    <div class="comp">
+      <article class="card">
+        <h3><a href="https://www.armfitness.com.br/" target="_blank" rel="noopener">ARM Fitness</a></h3>
+        <dl>
+          <div><dt>Posição</dt><dd>Moda fitness feminina: estilo, conforto e performance</dd></div>
+          <div><dt>Mix</dt><dd>Leggings, tops, conjuntos, regatas, moletom</dd></div>
+          <div><dt>Preço</dt><dd>Conjuntos em destaque a R$ 199</dd></div>
+          <div><dt>Oferta</dt><dd>Frete grátis acima de R$ 199, 10x sem juros, seção “até 50% off”</dd></div>
+        </dl>
+      </article>
+      <article class="card">
+        <h3><a href="https://www.hoperesort.com.br/" target="_blank" rel="noopener">Hope Resort</a></h3>
+        <dl>
+          <div><dt>Posição</dt><dd>Linha praia e fitness de uma marca grande, com evento próprio de corrida</dd></div>
+          <div><dt>Mix</dt><dd>Fitness, beachwear, roupas, masculino</dd></div>
+          <div><dt>Preço</dt><dd>R$ 98,90 (shorts) a R$ 359,90 (legging premium)</dd></div>
+          <div><dt>Oferta</dt><dd>“Até 25% off em Fitness”, parcelamento de 2x a 6x</dd></div>
+        </dl>
+      </article>
+    </div>
+    <div class="opps">
+      <div class="opp"><b>Kit de entrada</b><p>Top + legging logo acima do valor de frete grátis. Sobe o ticket sem depender de cupom agressivo.</p></div>
+      <div class="opp"><b>Conteúdo de uso real</b><p>UGC, provador, teste de transparência e caimento. É o que mais converte no nicho, e aqui marca nova compete de igual com marca grande.</p></div>
+      <div class="opp"><b>Base própria desde o mês 1</b><p>Cupom de primeira compra via WhatsApp e e-mail. Barateia o remarketing e acelera a recompra.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="idx">03 · Carga de treino</span>
+      <h2>Investimento em mídia</h2>
+      <p class="muted">A verba sobe a cada bloco conforme o pixel aprende e o retorno melhora. A divisão começa 70% Meta e 30% Google, porque o Meta gera a demanda que uma marca desconhecida ainda não tem na busca, e vai para 60/40 quando as pessoas começam a procurar a marca no Google.</p>
+    </div>
+    <div class="chart">
+      <div class="ct">Verba mensal mais que dobra do primeiro ao último bloco</div>
+      <div class="cs">Investimento por mês em cada bloco, em reais</div>
+      <div class="legend"><span><i style="background:var(--accent)"></i>Conservador</span><span><i style="background:var(--ink)"></i>Agressivo</span></div>
+      <svg id="inv" viewBox="0 0 760 300" role="img" aria-label="Verba mensal por bloco nos dois cenários"></svg>
+    </div>
+    <div class="tblbox">
+      <div class="tblbar">
+        <p class="how"><b>Como ler:</b> cada linha é um trimestre. Mostra quanto sai por mês, como essa verba se divide entre Meta e Google, quanto o trimestre custa no total e quanto já foi investido desde o início.</p>
+        <div class="seg" role="group" aria-label="Escolher cenário"><button type="button" data-s="c" aria-pressed="true">Conservador</button><button type="button" data-s="a" aria-pressed="false">Agressivo</button></div>
+      </div>
+      <div class="tbl">
+        <table>
+          <thead><tr>
+            <th>Bloco</th>
+            <th class="r">Verba por mês<small>total nos dois canais</small></th>
+            <th class="r">Meta Ads por mês<small>Instagram e Facebook</small></th>
+            <th class="r">Google Ads por mês<small>busca, Shopping, YouTube</small></th>
+            <th class="r">Total do bloco<small>verba mensal × 3 meses</small></th>
+            <th class="r">Acumulado no ano<small>soma desde o mês 1</small></th>
+          </tr></thead>
+          <tbody id="invRows"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="rules">
+      <div class="rule"><b>Gatilho de verba</b>Só sobe para o próximo bloco se o ROAS do bloco atual estiver dentro da faixa projetada. Fora da faixa, segura a verba e corrige oferta ou criativo.</div>
+      <div class="rule"><b>Ritmo de escala</b>No máximo 20% a 30% de aumento por semana nas campanhas vencedoras, para não reiniciar o aprendizado.</div>
+      <div class="rule"><b>Sazonalidade</b>Se os meses 10 a 12 caírem em Black Friday, Natal ou verão, concentrar 40% da verba do bloco nessas janelas.</div>
+      <div class="rule"><b>Condição do agressivo</b>Estoque e grade para cerca de 4 mil pedidos no ano e caixa para bancar os 6 primeiros meses abaixo do break-even.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="idx">04 · Periodização</span>
+      <h2>Plano de ação por bloco</h2>
+      <p class="muted">Cada bloco tem um objetivo e um critério de passagem. A próxima fase só começa quando o critério é atingido.</p>
+    </div>
+    <div class="track" id="track"></div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="idx">05 · Resultado</span>
+      <h2>Projeção de ROAS</h2>
+      <p class="muted">ROAS combinado é o faturamento total da loja dividido pelo investimento total em mídia. O conservador fecha o ano perto de 3,1x e o agressivo perto de 2,9x. O ROAS de moda no Brasil gira entre 3x e 6x em operações maduras; uma marca nova começa abaixo disso e entra na faixa no segundo semestre.</p>
+    </div>
+    <div class="chart">
+      <div class="ct">ROAS sai de abaixo do break-even no bloco 1 para acima de 3,5x no bloco 4</div>
+      <div class="cs">Ponto = meio da faixa projetada · traço = mínimo a máximo</div>
+      <div class="legend"><span><i style="background:var(--accent)"></i>Conservador</span><span><i style="background:var(--ink)"></i>Agressivo</span><span><i style="background:var(--muted);height:2px;vertical-align:4px"></i>Break-even 2,1x</span></div>
+      <svg id="roas" viewBox="0 0 760 330" role="img" aria-label="ROAS projetado por bloco nos dois cenários"></svg>
+    </div>
+    <div class="tblbox">
+      <div class="tblbar">
+        <p class="how"><b>Como ler:</b> para cada trimestre, quanto entra em anúncios, quanto volta em vendas e quanto sobra depois de pagar o produto, os custos da venda e a própria mídia.</p>
+        <div class="seg" role="group" aria-label="Escolher cenário"><button type="button" data-s="c" aria-pressed="true">Conservador</button><button type="button" data-s="a" aria-pressed="false">Agressivo</button></div>
+      </div>
+      <div class="tbl">
+        <table>
+          <thead><tr>
+            <th>Bloco</th>
+            <th class="r">Investido em mídia<small>no trimestre</small></th>
+            <th class="r">ROAS esperado<small>vendas para cada R$ 1 investido</small></th>
+            <th class="r">Faturamento estimado<small>investimento × ROAS</small></th>
+            <th class="r">Pedidos estimados<small>faturamento ÷ R$ 280</small></th>
+            <th class="r">Sobra após mídia<small>margem de 48% − investimento</small></th>
+          </tr></thead>
+          <tbody id="revRows"></tbody>
+        </table>
+      </div>
+      <div class="foot">
+        <span><b>ROAS esperado:</b> o número em destaque é o meio da faixa projetada, usado nos cálculos; abaixo dele, o mínimo e o máximo.</span>
+        <span><b>Sobra após mídia:</b> faturamento × 48% (o que fica depois de produto, frete, taxas e impostos) menos o investimento em anúncios. Valor negativo é o custo de aprendizado do lançamento.</span>
+        <span>Se o lançamento coincidir com Black Friday ou verão, o bloco 4 tende a ficar no topo da faixa.</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="idx">06 · Medição</span>
+      <h2>KPIs e mensuração</h2>
+      <p class="muted">A decisão sai do ROAS combinado, não do número do gerenciador: Meta e Google atribuem a mesma venda a si mesmos.</p>
+    </div>
+    <div class="tblbox">
+      <p class="how"><b>Como ler:</b> cada linha é um número que vamos acompanhar, o que ele mostra na prática, a meta para o ano e com que frequência ele é revisado.</p>
+      <div class="tbl">
+        <table class="kpi">
+          <thead><tr><th>Indicador</th><th>O que mostra</th><th>Meta</th><th>Revisão</th></tr></thead>
+          <tbody>
+            <tr><td><b>ROAS combinado</b></td><td>Quanto a loja vendeu no total para cada R$ 1 investido em anúncios. É o número que decide se a verba sobe.</td><td><b>3x ou mais</b> a partir do mês 7<small>R$ 3 em vendas para cada R$ 1</small></td><td>Semanal</td></tr>
+            <tr><td><b>ROAS por tipo de campanha</b></td><td>O retorno de cada frente, para saber onde colocar mais verba.</td><td><ul><li>Meta, novos clientes: <b>1,5 a 2,5x</b></li><li>Meta, remarketing: <b>5 a 8x</b></li><li>Google Shopping/PMax: <b>3 a 5x</b></li><li>Google, busca pela marca: <b>8x ou mais</b></li></ul></td><td>Semanal</td></tr>
+            <tr><td><b>Custo por compra</b></td><td>Quanto se gasta em anúncio para gerar uma venda.</td><td><b>Até R$ 126</b><small>45% do ticket médio de R$ 280</small></td><td>Semanal</td></tr>
+            <tr><td><b>Conversão do site</b></td><td>De cada 100 visitas na loja, quantas viram compra.</td><td><b>1 a 1,5 compra</b> a cada 100 visitas</td><td>Semanal</td></tr>
+            <tr><td><b>Recompra</b></td><td>Percentual de clientes que voltam a comprar.</td><td><b>15% ou mais</b> a partir do mês 7</td><td>Mensal</td></tr>
+            <tr><td><b>Base de contatos</b></td><td>Pessoas com WhatsApp ou e-mail cadastrados, que a marca alcança sem pagar mídia.</td><td><b>5 a 10 mil</b> no fim do ano</td><td>Mensal</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="foot">O retorno mostrado dentro do Meta e do Google não é usado para decidir verba, porque as duas plataformas contam a mesma venda para si.</p>
+    </div>
+    <article class="card">
+      <h3>Antes do mês 1</h3>
+      <ul class="check two">
+        <li>Pixel + API de Conversões com deduplicação e eventos de e-commerce completos</li>
+        <li>GA4 com e-commerce e conversões importadas no Google Ads</li>
+        <li>Merchant Center com feed de produtos aprovado</li>
+        <li>UTMs padronizadas e relatório semanal de ROAS combinado</li>
+        <li>Banco de 15 a 20 criativos para o primeiro mês</li>
+      </ul>
+    </article>
+  </section>
+</div>
+
+<script>
+(function(){
+  const B=[
+    {n:'Meses 1–3',fase:'Adaptação',sub:'Lançamento e validação',c:8000,a:18000,split:'70 / 30',rc:[1.5,2.0],ra:[1.2,1.6],
+     goal:'Descobrir quais produtos, ângulos e públicos vendem, e alimentar o pixel com compras.',
+     meta:'Campanha de vendas (Advantage+ ou CBO aberta) com 8 a 12 criativos novos por mês: UGC, provador, caimento, estático de oferta. Testes 1-3-1 por ângulo. 10% a 15% da verba em captação de contatos com cupom.',
+     google:'Busca pela marca para proteger o nome + Performance Max com feed do Merchant Center. Busca genérica só em cauda longa.',
+     base:'Contatos no WhatsApp e e-mail, recuperação de carrinho, pedido de avaliação com foto.',
+     gate:'50+ compras/mês no pixel e 2 a 3 criativos com ROAS acima de 2x.'},
+    {n:'Meses 4–6',fase:'Progressão',sub:'Tração',c:12000,a:28000,split:'65 / 35',rc:[2.3,2.8],ra:[2.0,2.5],
+     goal:'Escalar os criativos vencedores e estruturar o remarketing.',
+     meta:'Escala nos vencedores, catálogo dinâmico para visitantes e carrinho, públicos semelhantes de compradores, anúncios de parceria com microinfluenciadoras.',
+     google:'PMax por categoria (leggings, tops, praia), busca genérica nas palavras que já converteram, YouTube com os melhores vídeos do Meta.',
+     base:'Primeira campanha para a lista no lançamento de coleção. Kit de entrada para subir o ticket.',
+     gate:'ROAS combinado acima de 2,3x e custo por compra estável por 4 semanas.'},
+    {n:'Meses 7–9',fase:'Performance',sub:'Lucratividade',c:16000,a:38000,split:'60 / 40',rc:[3.0,3.5],ra:[2.8,3.3],
+     goal:'Operar acima do break-even e aumentar a recompra.',
+     meta:'70% em prospecção e 30% em remarketing e clientes. Lançamento de coleção com 7 dias de aquecimento. Um teste de criativo por semana contra fadiga.',
+     google:'Busca pela marca crescendo pelo efeito do Meta, Shopping com ROAS mínimo por categoria, remarketing em Display e YouTube.',
+     base:'Campanhas de recompra 45 e 90 dias após a compra. Programa simples de indicação.',
+     gate:'ROAS combinado acima de 3x e recompra acima de 15%.'},
+    {n:'Meses 10–12',fase:'Pico',sub:'Escala e sazonalidade',c:22000,a:50000,split:'60 / 40',rc:[3.5,4.2],ra:[3.3,4.0],
+     goal:'Maior volume do ano com ROAS saudável.',
+     meta:'Novos públicos e interesses amplos, Advantage+ com orçamento maior, campanhas de Black Friday, Natal e verão com 15 dias de aquecimento da lista.',
+     google:'PMax e Shopping com orçamento ampliado nas datas, cobertura total na busca pela marca, lances por ROAS-alvo.',
+     base:'Acesso antecipado às ofertas para quem já é cliente.',
+     gate:'Resultado: marca com histórico de pixel, base própria e ROAS entre 3,3x e 4,2x.'}
+  ];
+  const brl=v=>'R$ '+v.toLocaleString('pt-BR');
+  const x2=v=>v.toFixed(2).replace('.',',').replace(/0$/,'')+'x';
+  const mid=r=>(r[0]+r[1])/2;
+  const NS='http://www.w3.org/2000/svg';
+  const el=(tag,attrs,text)=>{const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(text!=null)e.textContent=text;return e;};
+
+  // tables (por cenário)
+  const MARGEM=.48, TICKET=280, BE=2.1;
+  const sgn=v=>(v<0?'− ':'+ ')+brl(Math.abs(Math.round(v)));
+  function render(sc){
+    const k=sc==='c'?'c':'a', rk=sc==='c'?'rc':'ra';
+    let acc=0,tInv=0,tFat=0,tSobra=0,rows='',rrows='';
+    B.forEach(b=>{
+      const m=b[k], pm=parseInt(b.split)/100, q=m*3; acc+=q;
+      rows+=`<tr><td><b>${b.n}</b><small>${b.fase}</small></td>
+        <td class="r big-v">${brl(m)}</td>
+        <td class="r">${brl(Math.round(m*pm))}<small>${Math.round(pm*100)}% da verba</small></td>
+        <td class="r">${brl(Math.round(m*(1-pm)))}<small>${Math.round((1-pm)*100)}% da verba</small></td>
+        <td class="r big-v">${brl(q)}</td>
+        <td class="r">${brl(acc)}</td></tr>`;
+      const r=b[rk], md=mid(r), fat=q*md, sobra=fat*MARGEM-q;
+      tInv+=q; tFat+=fat; tSobra+=sobra;
+      const st=md<BE?['p-low','Investindo para aprender']:md<2.6?['p-mid','Começa a lucrar']:['p-ok','Lucro'];
+      rrows+=`<tr><td><b>${b.n}</b><small>${b.fase}</small></td>
+        <td class="r">${brl(q)}</td>
+        <td class="r big-v">${x2(md)}<small>faixa ${x2(r[0])} a ${x2(r[1])}</small></td>
+        <td class="r big-v">${brl(Math.round(fat))}</td>
+        <td class="r">${Math.round(fat/TICKET).toLocaleString('pt-BR')}</td>
+        <td class="r big-v ${sobra<0?'neg':'pos'}">${sgn(sobra)}<small><span class="pill ${st[0]}">${st[1]}</span></small></td></tr>`;
+    });
+    rows+=`<tr class="total"><td>Total do ano</td><td></td><td></td><td></td><td class="r">${brl(acc)}</td><td></td></tr>`;
+    rrows+=`<tr class="total"><td>Total do ano</td><td class="r">${brl(tInv)}</td><td class="r">${x2(tFat/tInv)}<small>média do ano</small></td><td class="r">${brl(Math.round(tFat))}</td><td class="r">${Math.round(tFat/TICKET).toLocaleString('pt-BR')}</td><td class="r ${tSobra<0?'neg':'pos'}">${sgn(tSobra)}</td></tr>`;
+    document.getElementById('invRows').innerHTML=rows;
+    document.getElementById('revRows').innerHTML=rrows;
+    document.querySelectorAll('.seg button').forEach(bt=>bt.setAttribute('aria-pressed',String(bt.dataset.s===sc)));
+  }
+  document.querySelectorAll('.seg button').forEach(bt=>bt.addEventListener('click',()=>render(bt.dataset.s)));
+  render('c');
+
+  // periodização
+  const maxA=Math.max(...B.map(b=>b.a));
+  document.getElementById('track').innerHTML=B.map(b=>`
+    <article class="phase">
+      <div class="bar" title="Carga relativa de verba"><i style="width:${Math.round(b.a/maxA*100)}%"></i></div>
+      <span class="when">${b.n} · ${b.sub}</span>
+      <h3>${b.fase}</h3>
+      <p class="goal">${b.goal}</p>
+      <ul>
+        <li><b>Meta Ads</b>${b.meta}</li>
+        <li><b>Google Ads</b>${b.google}</li>
+        <li><b>Base própria</b>${b.base}</li>
+      </ul>
+      <div class="gate"><b>${b.n==='Meses 10–12'?'Chegada':'Critério de passagem'}</b>${b.gate}</div>
+    </article>`).join('');
+
+  // investment chart
+  (function(){
+    const s=document.getElementById('inv');
+    const L=70,R=740,T=20,Bt=250,vmax=55000;
+    const y=v=>Bt-v/vmax*(Bt-T), band=(R-L)/B.length;
+    [0,10000,20000,30000,40000,50000].forEach(v=>{
+      s.append(el('line',{x1:L,x2:R,y1:y(v),y2:y(v),stroke:v?'var(--line)':'var(--muted)','stroke-width':1}));
+      s.append(el('text',{x:L-10,y:y(v)+4,'text-anchor':'end','font-size':12,fill:'var(--muted)'},v?(v/1000)+' mil':'0'));
+    });
+    B.forEach((b,i)=>{
+      const cx=L+band*i+band/2,w=40;
+      [[b.c,'var(--accent)',-w-4,'Conservador'],[b.a,'var(--ink)',4,'Agressivo']].forEach(([v,c,o,nm])=>{
+        const r=el('rect',{x:cx+o,y:y(v),width:w,height:Bt-y(v),rx:4,fill:c});
+        r.append(el('title',{},`${nm}, ${b.n}: ${brl(v)} por mês`));
+        s.append(r);
+        s.append(el('text',{x:cx+o+w/2,y:y(v)-8,'text-anchor':'middle','font-size':12,'font-weight':700,fill:'var(--ink)'},(v/1000)+' mil'));
+      });
+      s.append(el('text',{x:cx,y:Bt+22,'text-anchor':'middle','font-size':13,'font-weight':600,fill:'var(--ink)'},b.n));
+      s.append(el('text',{x:cx,y:Bt+40,'text-anchor':'middle','font-size':11,fill:'var(--muted)'},b.fase));
+    });
+  })();
+
+  // ROAS chart
+  (function(){
+    const s=document.getElementById('roas');
+    const L=60,R=740,T=20,Bt=270,vmax=4.5,BE=2.1;
+    const y=v=>Bt-v/vmax*(Bt-T), band=(R-L)/B.length;
+    // zone below break-even
+    s.append(el('rect',{x:L,y:y(BE),width:R-L,height:Bt-y(BE),fill:'var(--accent-soft)',opacity:.55}));
+    [0,1,2,3,4].forEach(v=>{
+      s.append(el('line',{x1:L,x2:R,y1:y(v),y2:y(v),stroke:v?'var(--line)':'var(--muted)'}));
+      s.append(el('text',{x:L-10,y:y(v)+4,'text-anchor':'end','font-size':12,fill:'var(--muted)'},v+'x'));
+    });
+    s.append(el('line',{x1:L,x2:R,y1:y(BE),y2:y(BE),stroke:'var(--muted)','stroke-dasharray':'5 4','stroke-width':1.5}));
+    s.append(el('text',{x:R-6,y:y(BE)+16,'text-anchor':'end','font-size':11,fill:'var(--muted)'},'Abaixo do break-even (2,1x)'));
+    // trend lines
+    [['rc','var(--accent)',-20],['ra','var(--ink)',20]].forEach(([k,c,o])=>{
+      const pts=B.map((b,i)=>`${L+band*i+band/2+o},${y(mid(b[k]))}`).join(' ');
+      s.append(el('polyline',{points:pts,fill:'none',stroke:c,'stroke-width':1.5,'stroke-opacity':.35}));
+    });
+    B.forEach((b,i)=>{
+      const cx=L+band*i+band/2;
+      [['rc','var(--accent)',-20,'Conservador','end'],['ra','var(--ink)',20,'Agressivo','start']].forEach(([k,c,o,nm,anc])=>{
+        const r=b[k],x=cx+o,g=el('g',{});
+        g.append(el('line',{x1:x,x2:x,y1:y(r[0]),y2:y(r[1]),stroke:c,'stroke-width':2.5}));
+        g.append(el('line',{x1:x-6,x2:x+6,y1:y(r[0]),y2:y(r[0]),stroke:c,'stroke-width':2.5}));
+        g.append(el('line',{x1:x-6,x2:x+6,y1:y(r[1]),y2:y(r[1]),stroke:c,'stroke-width':2.5}));
+        const dot=el('circle',{cx:x,cy:y(mid(r)),r:6,fill:c,stroke:'var(--surface)','stroke-width':2});
+        dot.append(el('title',{},`${nm}, ${b.n}: ${x2(r[0])} a ${x2(r[1])}`));
+        g.append(dot);
+        g.append(el('text',{x:anc==='end'?x-12:x+12,y:y(mid(r))+4,'text-anchor':anc,'font-size':13,'font-weight':700,fill:c},x2(mid(r))));
+        s.append(g);
+      });
+      s.append(el('text',{x:cx,y:Bt+22,'text-anchor':'middle','font-size':13,'font-weight':600,fill:'var(--ink)'},b.n));
+      s.append(el('text',{x:cx,y:Bt+40,'text-anchor':'middle','font-size':11,fill:'var(--muted)'},b.fase));
+    });
+  })();
+})();
+</script>
+</body></html>
